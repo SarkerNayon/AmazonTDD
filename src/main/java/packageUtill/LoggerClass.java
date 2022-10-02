@@ -1,0 +1,19 @@
+package packageUtill;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.testng.Reporter;
+
+public class LoggerClass{
+
+	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+
+	public static void getLog(String msg) {
+		// Java Console Logger
+		LOGGER.log(Level.INFO, msg);
+		// TestNG Reporter Log
+		Reporter.log(msg + "<br>");
+
+	}
+}
